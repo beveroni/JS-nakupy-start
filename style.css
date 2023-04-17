@@ -1,0 +1,239 @@
+/* 
+ * Hlavní styly
+ * ============
+ */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-image: url(img/bg.png);
+  background-size: 25rem 25rem;
+  color: #333;
+}
+
+.container {
+  max-width: 62.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  background-color: #dbc7c9;
+  padding: 0.5rem 0;
+}
+
+main {
+  margin: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+footer {
+  background-color: #dbc7c9;
+  height: 4rem;
+}
+
+.footer__text {
+  text-align: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand__logo {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(img/icon.svg);
+  background-size: contain;
+}
+
+.brand__name {
+  margin-left: 0.5rem;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 1rem;
+  border: 2px solid #dbc7c9;
+  padding: 0.25rem 0.5rem;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+/* 
+ * Shoplist
+ * ============
+ */
+
+.shoplist {
+  width: 20rem;
+  background-color: #dbc7c9;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.shoplist__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shoplist__day {
+  font-size: 1.5rem;
+  margin: 0 0.5rem 1rem 0.5rem;
+}
+
+/* 
+ * ListItem
+ * ============
+ */
+
+ .list-item {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.list-item__tick {
+  flex: 0 0 auto;
+  order: 1;
+  margin-right: 0.5rem;
+}
+
+.list-item__toolbar {
+  flex: 1;
+  order: 2;
+  display: none;
+  justify-content: flex-end;
+}
+
+.list-item--toolbar-on > .list-item__toolbar {
+  display: flex;
+}
+
+.list-item__menu {
+  flex: 0 0 auto;
+  order: 4;
+  margin-left: 0.5rem;
+}
+
+.list-item__main {
+  flex: 1;
+  display: flex;
+  order: 3;
+  justify-content: space-between;
+}
+
+.list-item--toolbar-on > .list-item__main {
+  display: none;
+}
+
+.list-item__form {
+  flex: 1 0 100%;
+  display: none;
+  order: 5;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.list-item__form-fields {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.list-item__form-controls {
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+.list-item--toolbar-on > .list-item__form {
+  display: inline-block;
+}
+
+.field-input {
+  display: inline-block;
+  border: none;
+  border-bottom: 2px solid #bc7B77;
+  background-color: transparent;
+}
+
+.field-input:focus {
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.product-input {
+  width: 10rem;
+}
+
+.amount-input {
+  text-align: right;
+  width: 2.5rem;
+}
+
+.unit-input {
+  width: 4rem;
+}
+
+.icon-btn {
+  border: none;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 4px;
+  background-color: transparent;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.btn-tick {
+  background-image: url(img/tick-off.svg);
+}
+
+.btn-tick--on {
+  background-image: url(img/tick-on.svg);
+}
+
+.btn-menu {
+  background-image: url(img/dots.svg);
+}
+
+.btn-delete {
+  background-image: url(img/bin.svg);
+}
+
+.btn-up {
+  background-image: url(img/up.svg);
+}
+
+.btn-down {
+  background-image: url(img/down.svg);
+}
